@@ -22,6 +22,9 @@ const transporter = nodemailer.createTransport({
 		pass: process.env.EMAIL_PASSWORD,
 	},
 });
+app.get('/', (req, res) => {
+	res.send('Hello There!');
+});
 
 // API route for handling form submission
 app.post('/api/send-email', async (req, res) => {
